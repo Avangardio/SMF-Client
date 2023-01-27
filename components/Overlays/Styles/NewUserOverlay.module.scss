@@ -1,0 +1,95 @@
+@import "../../../styles/exports/defaultShadow";
+
+@mixin centerAbsolute() {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+div.DescriptionContainer {
+  background: #FFFFFF;
+  text-align: center;
+  font-size: 22px;
+  z-index: 999;
+  position: relative;
+  margin: 0 100px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+}
+
+
+@keyframes fade {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+}
+
+div.OverlayBackground {
+  opacity: .5;
+  background-color: #4E4B4B;
+  z-index: 998;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+div.NewUserWindow {
+  @include centerAbsolute();
+  z-index: 999;
+  width: 300px;
+  height: 500px;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  border-radius: 50px;
+  animation: fade .9s ease;
+}
+
+div.CodeConfirmationContainer {
+  @extend .NewUserWindow;
+  animation: none;
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'field field field field field field'
+    'error error error error error error'
+    'footer  footer footer footer footer footer';
+  gap: 0px 0px;
+  justify-content: center;
+}
+
+div.CodeConfirmationContainer div:last-of-type {
+  @extend .ErrorNotify !optional;
+  background-color: rgba(255, 0, 0, 0.46);
+  border-radius: 5px;
+  display: block;
+  margin: auto auto;
+  grid-row-start: auto;
+  white-space: pre-line;
+  padding: 0px;
+  grid-area: error;
+
+}
+
+div.Suggestion {
+  position: absolute;
+  bottom: 15px;
+  text-align: center;
+  width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  animation: fade .9s ease
+}
+
+div.Suggestion > a {
+  color: #0070f3;
+  cursor: pointer;
+}

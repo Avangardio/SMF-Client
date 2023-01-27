@@ -1,0 +1,23 @@
+div.SliderContainer
+  background: rgba(217, 217, 217, 0.25)
+  height: 100%
+  grid-area: 1 / 1 / 5 / 2
+  display: flex
+  justify-content: center
+  max-width: 100px
+  pointer-events: all
+  cursor: pointer
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+  &:hover
+    background: rgba(217, 217, 217, 0.5)
+
+  img
+    position: sticky
+    height: 50px
+    top: calc(100vh - 90px)
+    width: 50px
+    opacity: .25

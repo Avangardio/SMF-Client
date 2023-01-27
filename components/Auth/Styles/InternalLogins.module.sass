@@ -1,0 +1,130 @@
+@import ../../../styles/exports/defaultShadow
+.Disabled
+  cursor: not-allowed
+
+@mixin InternalButton
+  width: 200px
+  height: 30px
+  background: #FFFFFF
+  border: 1px solid #000000
+  border-radius: 20px
+  padding-left: 10px
+  padding-right: 10px
+
+@keyframes horizontal-shaking
+  0%
+    transform: translateX(0)
+  25%
+    transform: translateX(5px)
+  50%
+    transform: translateX(-5px)
+  75%
+    transform: translateX(5px)
+  100%
+    transform: translateX(0)
+
+.Shaking
+  animation: horizontal-shaking .6s
+
+@keyframes fade
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+.Disabled
+  cursor: not-allowed !important
+
+.ErrorCircle
+  content: '!'
+  position: absolute
+  top: 65px
+  right: 20px
+  background-color: red
+  border: 1px red solid
+  border-radius: 50%
+  width: 1rem
+  height: 1rem
+
+
+.Error
+  border: 1px solid #ff0000 !important
+  animation: fade .9s ease
+
+  &:focus
+    background-color: rgba(255, 0, 0, 0.46)
+
+
+.InternalForm
+  display: grid
+  flex-direction: column
+  align-content: center
+  align-items: center
+  grid-template-rows: 30px 30px 30px 65px 30px
+  grid-template-columns: 200px
+  row-gap: 10px
+  justify-content: center
+/* todo: https://www.npmjs.com/package/sass-autoprefixer префиксер  для кроссбраузерности*/
+
+.EmailForm
+  @include InternalButton
+  animation: fade .9s ease
+
+.EmailForm.Recovery
+  @include InternalButton
+  grid-row: 2
+  animation: fade .9s ease
+
+
+.PasswordForm
+  @include InternalButton
+  animation: fade .9s ease
+
+.NicknameForm
+  @include InternalButton
+  grid-row-start: 3
+  animation: fade .9s ease
+
+.FormButton
+  @include InternalButton
+  grid-row-start: 5
+  background-color: #727272
+  cursor: pointer
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  animation: fade .9s ease
+
+a.ForgotPassword
+  text-align: center
+  color: #0070f3
+  cursor: pointer
+  animation: fade .9s ease
+
+a.Suggestion
+  position: absolute
+  bottom: 10px
+  text-align: center
+  width: 100%
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  color: #0070f3
+  cursor: pointer
+  animation: fade .9s ease
+
+input.InputField
+  font-size: 32px
+  max-height: 50px
+  max-width: 6em
+  text-align: center
+  border: 0px
+  border-bottom: 2px black solid
+  grid-row: 2
+  animation: fade .9s ease
+
+input.InputField:focus
+  outline: none
+

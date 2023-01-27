@@ -1,0 +1,30 @@
+@keyframes fade
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+@keyframes horizontal-shaking
+  0%
+    transform: translateX(0)
+  25%
+    transform: translateX(5px)
+  50%
+    transform: translateX(-5px)
+  75%
+    transform: translateX(5px)
+  100%
+    transform: translateX(0)
+
+.Shaking
+  animation: horizontal-shaking .6s
+
+.ErrorNotify
+  background-color: rgba(255, 0, 0, 0.46)
+  border-radius: 5px
+  display: block
+  margin: -175px auto
+  grid-row-start: 4
+  white-space: pre-line
+  padding: 3px
+

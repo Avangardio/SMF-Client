@@ -1,0 +1,56 @@
+@mixin centerAbsolute()
+  position: fixed
+  margin: auto
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+
+@keyframes fade
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+span.MainElementHeader
+  font-size: 40px
+  grid-area: 1 / 2 / 2 / 4
+  display: flex
+  justify-content: center
+  align-items: center
+
+a.Back
+  grid-area: 1 / 1 / 2 / 2
+  font-size: 22px
+  color: #0070f3
+  display: flex
+  justify-content: center
+  align-items: center
+  cursor: pointer
+
+a.Delete
+  grid-area: 1 / 4 / 2 / 5
+  color: #db1f25
+  cursor: pointer
+  font-size: 22px
+
+div.MainElementContainer
+  @include centerAbsolute()
+  width: 900px
+  height: 650px
+  background: #FFFFFF
+  border: 1px solid #000000
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  border-radius: 50px
+  animation: fade .9s ease
+  z-index: 9990
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  grid-template-rows: repeat(7, 1fr)
+  grid-column-gap: 0px
+  grid-row-gap: 0px
+  justify-items: center
+  align-items: center
+
+
+

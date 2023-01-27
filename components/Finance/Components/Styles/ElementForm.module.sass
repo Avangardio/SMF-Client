@@ -1,0 +1,145 @@
+span.FormHeader
+  font-size: 22px
+
+
+form.ElementForm
+  z-index: 9999
+  display: contents
+
+.CalendarMUI
+  max-width: 200px
+  height: 50px
+  background: #FFFFFF
+  border: 1px solid #000000
+  border-radius: 50px
+  padding: 0 20px
+  font-size: 22px
+  grid-area: 4 / 2 / 5 / 3
+
+.StatusContainer
+  grid-area: 3 / 2 / 5 / 4
+  @keyframes fade
+    from
+      opacity: 0
+    to
+      opacity: 1
+  animation: fade .9s ease
+
+.NameForm
+  width: 650px
+  height: 50px
+  background: #FFFFFF
+  border: 1px solid #000000
+  border-radius: 50px
+  padding: 0 20px
+  font-size: 22px
+  grid-area: 2 / 2 / 3 / 4
+
+.OptionForm
+  width: 200px
+  height: 50px
+  border: 1px solid #000000
+  border-radius: 50px
+  font-size: 22px
+  padding: 0 20px
+  grid-area: 5 / 2 / 6 / 3
+
+.CurrencyForm
+  width: 200px
+  height: 50px
+  border: 1px solid #000000
+  border-radius: 50px
+  font-size: 22px
+  padding: 0 20px
+
+.CurrencyFormContainer
+  grid-area: 3 / 3 / 4 / 4
+
+  span
+    font-size: 22px
+    padding: 0 20px
+  display: flex
+  align-items: center
+  justify-content: center
+
+.AmountForm
+  width: 200px
+  height: 50px
+  background: #FFFFFF
+  border: 1px solid #000000
+  border-radius: 50px
+  padding: 0 20px
+  font-size: 22px
+  grid-area: 3 / 2 / 4 / 3
+  text-align: center
+
+.TypeForm
+  width: 300px
+  height: 50px
+  border: 1px solid #000000
+  border-radius: 50px
+  font-size: 22px
+  grid-area: 5 / 2 / 6 / 3
+
+
+.DescriptionTextArea
+  width: 350px
+  height: 250px
+  overflow-y: auto
+  resize: none
+  border: 1px solid #000000
+  border-radius: 20px
+  padding: 20px 20px
+  font-size: 22px
+  scroll-padding: 20px
+
+  ::-webkit-scrollbar
+    width: 1em
+
+  ::-webkit-scrollbar-track
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
+
+  ::-webkit-scrollbar-thumb
+    background-color: darkgrey
+    outline: 1px solid slategrey
+  grid-area: 4 / 3 / 6 / 4
+
+.ErrorContainer
+  display: flex
+  grid-area: 6 / 2 / 6 / 4
+  align-items: center
+
+@keyframes horizontal-shaking
+  0%
+    transform: translateX(0)
+  25%
+    transform: translateX(5px)
+  50%
+    transform: translateX(-5px)
+  75%
+    transform: translateX(5px)
+  100%
+    transform: translateX(0)
+
+.Shaking
+  animation: horizontal-shaking .6s
+
+
+input.SubmitForm
+  grid-area: 6 / 2 / 7 / 4
+  max-width: 200px
+  max-height: 50px
+  min-height: 50px
+  min-width: 200px
+  border-radius: 50px
+  background-color: #FFFFFF
+  font-size: 22px
+  cursor: not-allowed
+
+  &:hover
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
+
+.Active
+  cursor: pointer !important
+  background-color: #4E4B4B
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)

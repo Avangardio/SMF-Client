@@ -1,0 +1,102 @@
+div.ListElementContainer
+  width: 600px
+  height: 60px
+  background: #FFFFFF
+  border-width: 0px 0px 1px 1px
+  border-style: solid
+  border-color: #4E4B4B
+  box-shadow: 4px -4px 4px rgba(78, 75, 75, 0.25)
+  align-items: center
+  display: flex
+  border-radius: 5px
+  cursor: pointer
+
+  &:hover
+    color: rgba(70, 150, 240, 1)
+    box-shadow: 0 0 8px 4px rgba(70, 150, 240, 0.25) inset, 0 0 8px 4px rgba(70, 150, 240, 0.25)
+    border: 1px solid rgba(70, 150, 240, 1)
+
+  span.Name
+    vertical-align: middle
+    font-size: 22px
+    max-width: 25em
+    overflow-x: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+    color: #4E4B4B
+
+  span.Edit
+    padding: 0 20px
+    vertical-align: middle
+    font-size: 30px
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    color: #4E4B4B
+
+  span.Amount
+    margin-left: auto
+    vertical-align: middle
+    font-size: 22px
+    padding-left: 20px
+
+  .Positive
+    color: #39d326
+
+  .Negative
+    color: red
+
+  .NotLast
+    border-bottom: none
+
+
+picture.ImageNest
+  padding: 0 20px
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+img.TypeIcon
+  width: 50px
+  height: 50px
+  border-radius: 50%
+  border: #4E4B4B 1px solid
+  vertical-align: middle
+
+.Type1
+  @extend .TypeIcon
+  background-color: #FE7E36
+
+.Type2
+  @extend .TypeIcon
+  background-color: #FFE81E
+
+.Type3
+  @extend .TypeIcon
+  background-color: #89FF2D
+
+.Type4
+  @extend .TypeIcon
+  background-color: #2AE0BF
+
+.Type5
+  @extend .TypeIcon
+  background-color: #EE29FF
+
+.Type6
+  @extend .TypeIcon
+  background-color: #66D1FF
+
+.Type7
+  @extend .TypeIcon
+  background-color: #FF6767
+
+.Type8
+  @extend .TypeIcon
+  background-color: #5B76FF
+
+.Type9
+  @extend .TypeIcon
+  background-color: #D9D9D9

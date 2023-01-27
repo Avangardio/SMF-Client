@@ -1,0 +1,48 @@
+div.MainFinanceGrid
+  display: grid
+  grid-template-columns: minmax(50px, 1fr) 650px repeat(1, 1fr) minmax(50px, 1fr)
+  grid-template-rows: 50px repeat(1, 1fr)
+  grid-column-gap: 10px
+  grid-row-gap: 0px
+
+.MainFinanceHeader
+  grid-area: 1 / 2 / 2 / 3
+
+.MainFinanceList
+  grid-area: 2 / 2 / 8 / 3
+
+.MainFinanceDiagram
+  grid-area: 2 / 4 / 4 / 6
+
+.MainFinanceCounter
+  grid-area: 5 / 4 / 7 / 6
+
+div.LoadingContainer
+  position: absolute
+  display: flex
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  margin: 0 auto
+  align-items: center
+  justify-content: center
+
+div.ErrorContainer
+  position: absolute
+  display: flex
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  margin: 0 auto
+  align-items: center
+  justify-content: center
+  flex-direction: column
+
+  img
+    max-width: 80px
+    max-height: 80px
+
+  span
+    font-size: 22px
