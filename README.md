@@ -2,7 +2,7 @@
 Представление веб-сервиса SaveMyFinance от Avangardio.
 Ознакомиться можно по соответствующей ссылке <a href="https://savemyfinance.com" target = "_blank">моём сайте</a>.
 <p><img src="https://avangardio-1.ru/static/SMF-Header.png"></p>
-Ссылка на обзор сервера аутентификации - <a href="https://github.com/Avangardio/SMF/tree/Auth#readme">здесь</a>, на финансовый сервер - <a href="https://github.com/Avangardio/SMF/tree/Finance#readme">здесь</a>
+Ссылка на обзор сервера аутентификации - <a href="https://github.com/Avangardio/SMF-Authentification-Server">здесь</a>, на финансовый сервер - <a href="https://github.com/Avangardio/SMF-Finance_Server">здесь</a>
 
 # Обзор
 Данный сервис рассчитывался как отличная возможность получения опыта в создании трендовых и актуальных сервисов, как полностью клиентскую, так и серверную часть.
